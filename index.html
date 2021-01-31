@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Domácí úkol ze Statistické metody zpracování přirozených jazyků 1</title>
+    <autor>Ondřej Michálek</autor>
+</head>
+<body>
+
+<h1>Domácí úkol ze Statistických metod z NLP</h1>
+<h2>1. část - Entropie</h2>
+<br>
+<a href="https://ufal.mff.cuni.cz/courses/npfl067#">Zadání</a>
+<h3>Soubory</h3>
+<p>Součástí mého řešení jsou 4 soubory:
+    <ul>
+    <li>tento index.html</li>
+    <li><a href="hwEntropy.py>">hwEntropy.py</a></li>
+    <li><a href="hwCrossEntropy.py">hwCrossEntropy.py</a></li>
+    <li><a href="GnuplotEntropy.py">GnuplotEntropy.py</a> </li>
+</ul>
+
+<h3>1. ukol</h3>
+<p>
+V prvním úkolu šlo o porovnání dvou jazyků, konkrétně češtiny a angličtiny. <br>
+    Nejdříve jsem si vytvořil unigramy a bigramy ze slov, přičemž jsem zanesl specialní znak<br>
+začátku souboru.<br>
+    Pro znázornění možné chyby v souboru pomocí "messup" jsem si vytvořil slovníky unikátních slov i znaků,
+    <br> ze kterých jsem pak vybíral, zda se slovo či znak změní, ři nikoliv.
+
+    <p>Podmíněnou entropii textu jsem spočítal pomocí vzorečku.
+    <br>Jelikož se pokusy prováděly 10x. Na githubovém uložišti mám též několik grafů, které ukazují,
+    jak se měnila entropie j závislosti na jazyku, zda se měnila slova ši znaky a jaká byla "chybovost"
+<p>Zjištění<br>
+<ul>
+    <li>Ukazuje se, že měnit slova nemá takový dopad jako měnit znaky.</li>
+    <li>Čeština se zdá být náchylnější k drastickému snížení entropie, pokud se "zamíchají" znaky. </li>
+    <li>Pokud se jedná o připojení L2 k jazyku L1, o trochu se Entropie sníží. Řekl bych, že se sníží více, <br>
+        pokud tyto jazyky nebudou mít žádnou společnou slovní zásobu a dojde ještě k nějakému "mess up"
+    <br> Zkusil jsem spojit CZ a EN text, ale výsledek se příliš nelišil, konkrétně entropie <br>
+        ležela mezi E(Cz) a E(EN)<-
+        </li>
+    <li>Pro vykreslení jsem napsal kód Gnuplot, který je velmi triviální. Určitě by se dalo dostat více, pokud bzch tomu věnoval více času.
+    Minimální a maximální entropii mám pouye v TEXTCZ1RESULT.txt, TEXTEN1RESULT.txt a TEXTBARESULT.txt (Both texts Appended) </li>
+</ul>
+
+<h3>2. úkol</h3>
+<p> v tomto úkolu bylo cílem použít smoothing a EM algoritmus<br>
+    Kód jsem rozčlenil na jednotlivé bloky a vše je v hlavní metodě runProgram()
+</p>
+<p>
+    Bohužel mi dochází čas a musím soubory uploadnout na internet. Snad je vše z mého zdrojáku pochopitelné.
+</p>
+</body>
+</html>
